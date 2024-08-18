@@ -3,6 +3,7 @@ import requests
 
 
 def get_data(place, forecast_days=None):
+    # use st.secrets() instead of os.getenv() while deploying to streamlit
     url = (f"https://api.openweathermap.org/data/2.5/forecast?"
            f"q={place}&"
            f"appid={os.getenv("OpenWeatherApi")}")
